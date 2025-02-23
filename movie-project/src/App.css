@@ -85,7 +85,7 @@
   background: #ddd;
 }
 
-/* Highlight the active page button */
+
 .pagination .active-page {
   background: #007bff !important;
   color: white !important;
@@ -101,7 +101,7 @@
 }
 
 
-/* Table Container */
+
 .movie-table-container {
   max-width: 900px;
   margin: 20px auto;
@@ -112,7 +112,7 @@
   overflow-x: auto;
 }
 
-/* Table Styles */
+
 .movie-table {
   width: 100%;
   border-collapse: collapse;
@@ -140,31 +140,30 @@
   background-color: #f8f9fa;
 }
 
-/* Adjust Poster Column */
+
 .poster-column {
-  width: 80px; /* Small column for poster */
+  width: 80px; 
 }
 
-/* Adjust Year Column */
+
 .year-column {
-  width: 120px; /* More space for Year */
+  width: 120px; 
 }
 
-/* Adjust Type Column */
 .type-column {
-  width: 150px; /* More space for Type */
+  width: 150px; 
 }
 
-/* Movie Poster */
+
 .movie-poster {
-  width: 50px; /* Make the poster smaller */
+  width: 50px; 
   height: 75px;
   object-fit: cover;
   border-radius: 5px;
   border: 1px solid #ddd;
 }
 
-/* Results Info */
+
 .results-info {
   text-align: center;
   font-weight: bold;
@@ -173,7 +172,7 @@
   color: #333;
 }
 
-/* Info Messages */
+
 .info-message {
   text-align: center;
   font-size: 16px;
@@ -182,7 +181,7 @@
 
 
 
-/* Search Controls */
+
 .search-controls {
   display: flex;
   justify-content: space-between;
@@ -191,7 +190,7 @@
   padding: 10px;
 }
 
-/* Search Box */
+
 .search-box {
   display: flex;
   gap: 10px;
@@ -218,7 +217,8 @@
   background: #0056b3;
 }
 
-/* Dropdown Positioned to the Right */
+
+
 .dropdown-container {
   margin-left: auto;
 }
@@ -237,7 +237,8 @@
 }
 
 
-/* Movie Details Page */
+
+
 .movie-details-container {
   max-width: 800px;
   margin: 20px auto;
@@ -248,7 +249,7 @@
   text-align: center;
 }
 
-/* Back to Home Button */
+
 .back-button {
   display: inline-block;
   padding: 10px 20px;
@@ -269,7 +270,7 @@
   text-decoration: none;
 }
 
-/* Movie Details Layout */
+
 .movie-details {
   display: flex;
   gap: 20px;
@@ -277,7 +278,7 @@
   margin-top: 20px;
 }
 
-/* Movie Poster */
+
 .movie-details img {
   width: 200px;
   height: auto;
@@ -285,7 +286,7 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Movie Info Section */
+
 .movie-info {
   text-align: left;
 }

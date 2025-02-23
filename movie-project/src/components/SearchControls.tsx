@@ -6,14 +6,12 @@ const SearchControls: React.FC = () => {
   const [query, setQuery] = useState<string>(searchQuery);
 
   const handleSearch = () => {
-    updateQuery(query, 1, type); // Reset to page 1 when searching
+    updateQuery(query, 1, type); 
   };
 
-  // Calculate total pages (OMDB API returns max 10 results per page)
   const resultsPerPage = 10;
   const totalPages = Math.ceil(totalResults / resultsPerPage);
 
-  // Generate page numbers dynamically
   const getPageNumbers = () => {
     const maxPagesToShow = 10;
     let startPage = Math.max(1, page - 5);
@@ -29,19 +27,17 @@ const SearchControls: React.FC = () => {
   return (
     <div className="search-controls">
       <div className="search-box">
-      {/* Search Bar */}
+
       <input
         type="text"
         placeholder="Search Movies..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        onKeyPress={(e) => e.key === "Enter" && handleSearch()} // Search on Enter key press
+        onKeyPress={(e) => e.key === "Enter" && handleSearch()} 
       />
       <button onClick={handleSearch}>Search</button>
       </div>
 
-
-      {/* Pagination */}
       {totalPages > 1 && (
         <div className="pagination">
           <button disabled={page === 1} onClick={() => updateQuery(query, 1, type)}>
@@ -70,7 +66,6 @@ const SearchControls: React.FC = () => {
         </div>
       )}
 
-        {/* Filter Dropdown */}
         <div className="dropdown-container">
       <select value={type} onChange={(e) => updateQuery(query, 1, e.target.value)}>
         <option value="">All</option>

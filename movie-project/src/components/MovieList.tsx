@@ -9,7 +9,6 @@ const MovieList: React.FC = () => {
   if (error) return <p className="info-message">Error: {error}</p>;
 
   const handleMovieClick = (imdbID: string) => {
-    // ✅ Store search query, page, and type in local storage
     localStorage.setItem("lastSearchQuery", searchQuery);
     localStorage.setItem("lastSearchPage", page.toString());
     localStorage.setItem("lastSearchType", type);
@@ -38,7 +37,6 @@ const MovieList: React.FC = () => {
                 />
               </td>
               <td>
-                {/* ✅ Save search state before navigating */}
                 <Link to={`/movie/${movie.imdbID}`} onClick={() => handleMovieClick(movie.imdbID)} className="movie-link">
                   {movie.Title}
                 </Link>

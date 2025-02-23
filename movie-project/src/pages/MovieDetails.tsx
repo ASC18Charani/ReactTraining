@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
-const API_KEY = "c6d94035"; // Your OMDB API key
+const API_KEY = "c6d94035"; 
 
 interface MovieDetailsType {
   Title: string;
@@ -51,7 +51,6 @@ const MovieDetails: React.FC = () => {
 
   return (
     <div className="movie-details-container">
-      {/* ✅ Use last search state in the "Back to Home" button */}
       <Link to={`/?s=${lastSearchQuery}&p=${lastSearchPage}&type=${lastSearchType}`} className="back-button">
         ← Back to Home
       </Link>

@@ -2,7 +2,6 @@ import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
 
-// Define types
 interface Movie {
   imdbID: string;
   Title: string;
@@ -41,15 +40,14 @@ export const MovieProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [error, setError] = useState<string>("");
   const [totalResults, setTotalResults] = useState<number>(0);
 
-  const API_KEY = "c6d94035"; // Your OMDB API Key
-
-  // Set search query dynamically (default is empty, so user must enter a name)
+  const API_KEY = "c6d94035"; 
+ 
   const searchQuery: string = queryParams.get("s") || "";
   const page: number = Number(queryParams.get("p")) || 1;
   const type: string = queryParams.get("type") || "";
 
   const fetchMovies = async () => {
-    if (!searchQuery) return; // Don't fetch if search is empty
+    if (!searchQuery) return; 
 
     setLoading(true);
     setError("");
@@ -64,7 +62,7 @@ export const MovieProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         setTotalResults(Number(response.data.totalResults) || 0);
       } else {
         setError(response.data.Error || "No results found.");
-        setMovies([]); // Clear previous results
+        setMovies([]); 
       }
     } catch (err) {
       setError("Failed to fetch movies.");
