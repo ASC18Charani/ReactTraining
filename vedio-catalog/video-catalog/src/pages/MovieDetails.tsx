@@ -34,8 +34,8 @@ const MovieDetails: React.FC = () => {
 
   return (
     <div className="movie-details-container">
-      <Link to={`/?s=${lastSearchQuery}&p=${lastSearchPage}&type=${lastSearchType}`} className="back-button">
-        ← Back to Home
+       <Link to={`/movies?s=${lastSearchQuery}&p=${lastSearchPage}&type=${lastSearchType}`} className="back-button">
+        ← Back to Movies
       </Link>
 
       <div className="movie-details">

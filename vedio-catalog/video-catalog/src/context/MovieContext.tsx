@@ -18,7 +18,7 @@ const MovieContext = createContext<MovieContextType | undefined>(undefined);
 
 export const MovieProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const navigate = useNavigate();
-  const { search } = useLocation();
+  const { search, pathname } = useLocation();
   const queryParams = new URLSearchParams(search);
 
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -50,7 +50,8 @@ export const MovieProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   }, [search]);
 
   const updateQuery = (newSearch: string, newPage: number, newType: string) => {
-    navigate(`/?s=${newSearch}&p=${newPage}&type=${newType}`);
+    const newPath = pathname.startsWith("/movies") ? "/movies" : "/movies";
+    navigate(`${newPath}?s=${newSearch}&p=${newPage}&type=${newType}`);
   };
 
   return (
